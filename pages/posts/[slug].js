@@ -1,9 +1,11 @@
+import {useRouter} from "next/router";
 import Link from "next/link";
 
-export default function SobrePage() {
+export default function Slug() {
+    const router = useRouter();
     return (
         <div>
-            Você está na página sobre
+            ID do post atual: {router.query.slug}
             <ul>
                 <li>
                     <Link href='/'>
@@ -12,5 +14,5 @@ export default function SobrePage() {
                 </li>
             </ul>
         </div>
-    );
+    )
 }
